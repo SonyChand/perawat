@@ -20,9 +20,12 @@ class Home extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('home/templates/header');
-		$this->load->view('home/templates/navigation');
-		$this->load->view('home/index');
+		$data = [
+			'title' => "Sistem Informasi Pemesanan Perawat"
+		];
+		$this->load->view('home/templates/header', $data);
+		$this->load->view('home/templates/navigation', $data);
+		$this->load->view('home/index', $data);
 		$this->load->view('home/templates/footer');
 	}
 }
